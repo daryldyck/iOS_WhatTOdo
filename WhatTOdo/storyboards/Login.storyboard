@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="swU-d6-2gs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="BqD-Ga-a8C">
+            <objects>
+                <viewController id="yDG-Af-Q6l" customClass="LoginViewController" customModule="WhatTOdo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yt2-ag-AZx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toronto_skyline" translatesAutoresizingMaskIntoConstraints="NO" id="PNq-bB-Jwe">
+                                <rect key="frame" x="0.0" y="497" width="414" height="399"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="7oR-ZO-Dbz">
+                                <rect key="frame" x="33" y="189" width="346" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7oR-ZO-Dbz" secondAttribute="height" multiplier="309:52" id="WsG-Pu-fio"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLK-hJ-Sgu">
+                                <rect key="frame" x="33" y="336" width="348" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" name="textOnBackground"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="primaryVariant"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3f-QI-Fsk">
+                                <rect key="frame" x="33" y="385" width="348" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" name="textOnBackground"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="primaryVariant"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Remember Me" translatesAutoresizingMaskIntoConstraints="NO" id="rEh-iv-siJ">
+                                <rect key="frame" x="33" y="438" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" name="secondary"/>
+                                <connections>
+                                    <action selector="onRememberChanged:" destination="yDG-Af-Q6l" eventType="valueChanged" id="FQg-CF-s25"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9A-k8-EYz">
+                                <rect key="frame" x="93" y="444" width="100" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="textOnBackgroundSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2a6-ag-yYe" customClass="ZFRippleButton" customModule="WhatTOdo" customModuleProvider="target">
+                                <rect key="frame" x="304" y="435" width="77" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" name="textOnBackgroundSecondary"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="primaryVariant"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleColor">
+                                        <color key="value" name="buttonRipple"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ripplePercent">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButton:" destination="yDG-Af-Q6l" eventType="touchUpInside" id="qwd-jI-vD5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uuG-9G-lnD"/>
+                        <color key="backgroundColor" name="mainBackground"/>
+                        <constraints>
+                            <constraint firstItem="PNq-bB-Jwe" firstAttribute="top" secondItem="yt2-ag-AZx" secondAttribute="top" constant="497" id="5fh-Bg-S5n"/>
+                            <constraint firstItem="uuG-9G-lnD" firstAttribute="trailing" secondItem="PNq-bB-Jwe" secondAttribute="trailing" id="B4h-P5-56H"/>
+                            <constraint firstItem="uuG-9G-lnD" firstAttribute="trailing" secondItem="7oR-ZO-Dbz" secondAttribute="trailing" constant="15" id="CW4-3U-sac"/>
+                            <constraint firstItem="7oR-ZO-Dbz" firstAttribute="top" secondItem="uuG-9G-lnD" secondAttribute="top" constant="145" id="Fbo-df-npJ"/>
+                            <constraint firstItem="7oR-ZO-Dbz" firstAttribute="leading" secondItem="uuG-9G-lnD" secondAttribute="leading" constant="15" id="PMa-wP-XAr"/>
+                            <constraint firstItem="7oR-ZO-Dbz" firstAttribute="centerX" secondItem="yt2-ag-AZx" secondAttribute="centerX" id="Tl1-rx-ibX"/>
+                            <constraint firstItem="PNq-bB-Jwe" firstAttribute="leading" secondItem="uuG-9G-lnD" secondAttribute="leading" id="YPg-3J-5Lj"/>
+                            <constraint firstAttribute="bottom" secondItem="PNq-bB-Jwe" secondAttribute="bottom" id="gvc-55-UIn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rYH-Mu-HX4">
+                        <barButtonItem key="backBarButtonItem" title="Logout" id="Gjq-EL-ZQ8"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="passwordTF" destination="l3f-QI-Fsk" id="Rp8-BK-6ic"/>
+                        <outlet property="rememberSwitch" destination="rEh-iv-siJ" id="Clg-vJ-1Wo"/>
+                        <outlet property="userNameTF" destination="CLK-hJ-Sgu" id="k5a-Qs-D7h"/>
+                        <segue destination="ylX-8j-AJF" kind="show" identifier="homeSegua" id="mvX-A6-5uI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpj-xx-a7u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457.9710144927537" y="219.64285714285714"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="qhh-bh-Oxa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="ylX-8j-AJF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iCj-mI-NQF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YIl-wA-DT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1458" y="672"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TPG-Ms-RV5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="swU-d6-2gs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CN8-mj-4fA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="navBackground"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yDG-Af-Q6l" kind="relationship" relationship="rootViewController" id="Lnv-eF-Y0f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMC-oo-FrX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="547.82608695652175" y="219.64285714285714"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="2a6-ag-yYe">
+            <size key="intrinsicContentSize" width="45" height="30"/>
+        </designable>
+    </designables>
+    <color key="tintColor" name="primary"/>
+    <resources>
+        <image name="logo" width="98.099998474121094" height="14.600000381469727"/>
+        <image name="toronto_skyline" width="200" height="102.33999633789062"/>
+        <namedColor name="buttonRipple">
+            <color red="1" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainBackground">
+            <color red="0.92500001192092896" green="0.92500001192092896" blue="0.92500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navBackground">
+            <color red="0.15299999713897705" green="0.2669999897480011" blue="0.56499999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.15299999713897705" green="0.2669999897480011" blue="0.56499999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryVariant">
+            <color red="0.063000001013278961" green="0.10599999874830246" blue="0.22699999809265137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textOnBackground">
+            <color red="0.125" green="0.125" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textOnBackgroundSecondary">
+            <color red="0.25099998712539673" green="0.25099998712539673" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

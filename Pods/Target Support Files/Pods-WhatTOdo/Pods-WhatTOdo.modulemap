@@ -1,0 +1,6 @@
+framework module Pods_WhatTOdo {
+  umbrella header "Pods-WhatTOdo-umbrella.h"
+
+  export *
+  module * { export * }
+}
