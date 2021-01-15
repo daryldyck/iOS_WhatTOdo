@@ -1,4 +1,4 @@
 # WhatTOdo
-WhatTOdo Android Version
+WhatTOdo iOS Version
 
 ![](images/Screenshots.jpg)
